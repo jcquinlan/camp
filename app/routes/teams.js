@@ -5,5 +5,8 @@ export default Ember.Route.extend({
     return {
       name: params.name
     };
+  },
+  renderTemplate(controller, model) {
+    this.render(`teams/${model.name}`);
   }
 });
