@@ -4,7 +4,8 @@ export default Ember.Route.extend({
   github: Ember.inject.service('github'),
   model(params) {
     const teamLabel = {
-      code: 'Code'
+      code: 'Code',
+      editorial: 'Editorial'
     }[params.name];
 
     return this.get('github').getCampIssues({
