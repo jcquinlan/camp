@@ -121,33 +121,6 @@
     </h2>
 
     <p>
-      <strong>If you already have an idea of what you would like to do</strong>
-      please visit the <a href="https://github.com/hoodiehq/editorial/issues">Issues section</a>
-      of this repository. The <a href="https://github.com/hoodiehq/editorial/issues">Issues section</a>
-      is where we keep track of potential editorial contributions, requests for
-      help, and general suggestions.
-    </p>
-
-    <p>
-      Here are some of the issues we are working on 👉
-      <a href="http://waffle.io/hoodiehq/editorial">
-        <img src="https://camo.githubusercontent.com/bf78eb31f81609f8957e5bf73585436086395ff3/68747470733a2f2f62616467652e776166666c652e696f2f686f6f64696568712f656469746f7269616c2e7376673f6c6162656c3d7265616479267469746c653d5265616479" alt="Stories in Ready" data-canonical-src="https://badge.waffle.io/hoodiehq/editorial.svg?label=ready&amp;title=Ready" style="max-width:100%;">
-      </a> and
-      <a href="http://waffle.io/hoodiehq/editorial">
-        <img src="https://camo.githubusercontent.com/c5b5fe281c2952a7f4f8c7a284f718f0028e7a0f/68747470733a2f2f62616467652e776166666c652e696f2f686f6f64696568712f656469746f7269616c2e7376673f6c6162656c3d496e25323050726f6772657373267469746c653d496e25323050726f6772657373" alt="Stories in Progress" data-canonical-src="https://badge.waffle.io/hoodiehq/editorial.svg?label=In%20Progress&amp;title=In%20Progress" style="max-width:100%;">
-      </a>
-    </p>
-
-    <p>When claiming a task please do the following:</p>
-
-    <ol>
-      <li>Find a task with the green <code>help wanted</code> label </li>
-      <li>Claim this issue (<code>comment on the issue or assign yourself</code>)</li>
-      <li>Remove <code>ready</code> label, add <code>in progress</code> label</li>
-      <li>If possible, give an indication of the timeline ☺️</li>
-    </ol>
-
-    <p>
       <strong>If you are brand new to Hoodie</strong>
       check out our <a href="http://hood.ie/contribute/">contribution guide</a>.
       We’re looking for people of all sorts, so don’t be afraid to get involved.
@@ -230,6 +203,24 @@
       <li><a href="https://guides.github.com/introduction/flow/">Understanding the GitHub Flow</a></li>
     </ul>
 
+    <h2>Issue for new editorial contributors</h2>
+
+    <ul class="issues">
+    {{#each model.yourFirstPRIssues as |issue|}}
+      <li class="open {{issue-labels issue}}">
+        <a class="title" href="{{issue.url}}">{{issue.title}}</a>
+      </li>
+    {{/each}}
+    {{#unless model.yourFirstPRIssues}}
+      <li class="empty">
+        So sorry, but we currently don’t have any issues reserved for new
+        contributors! Please <a href="https://twitter.com/hoodiehq">ping us on
+        twitter</a> or <a href="http://hood.ie/chat">in our Hoodie chat</a>,
+        we are happy to help you find something to work on
+      </li>
+    {{/unless}}
+    </ul>
+
     <h2>Becoming a Hoodie contributor</h2>
 
     <p>
@@ -279,6 +270,46 @@
       before being merged into the project.
     </p>
 
+    <h2>Issue for recurring code contributors</h2>
+
+    <ul class="issues">
+    {{#each model.notYourFirstPRIssues as |issue|}}
+      <li class="open {{issue-labels issue}}">
+        <a class="title" href="{{issue.url}}">{{issue.title}}</a>
+      </li>
+    {{/each}}
+    {{#unless model.notYourFirstPRIssues}}
+      <li class="empty">
+        So sorry, but we currently don’t have any issues reserved for new
+        contributors! Please <a href="https://twitter.com/hoodiehq">ping us on
+        twitter</a> or <a href="http://hood.ie/chat">in our Hoodie chat</a>,
+        we are happy to help you find something to work on
+      </li>
+    {{/unless}}
+    </ul>
+
+    <h2>How to help maintain?</h2>
+
+    <p>
+      Code maintainers are helping to review open pull requests to our code
+      repositories, help creating new camp issues so more people can work on
+      them, respond to issues make sure the problem can be reproduced and has
+      enough context to work on, and helps with code questions in our
+      <a href="http://hood.ie/chat">Hoodie Chat</a>.
+    </p>
+
+    <h2>Pull requests awaiting review</h2>
+
+    <p>
+      To be done
+    </p>
+
+    <h2>Stale issues and pull requests</h2>
+
+    <p>
+      To be done
+    </p>
+
     <h3>Next steps</h3>
 
     <p>
@@ -300,21 +331,6 @@
       (you can <a href="mailto:renrutnnej@gmail.com?Subject=I%20have%20onboarding%20feedback!">email Jenn right here</a>)
       but know that it’s an area we want to make better.
     </p>
-
-    <p>
-      There is a <a href="https://github.com/hoodiehq/editorial/issues?q=is%3Aissue+is%3Aopen+label%3A%22Next+steps%22">Next steps</a>
-      label in the <a href="https://github.com/hoodiehq/editorial/issues">Issues section</a>
-      for editorial contributions considered to be a little more involved than
-      what we’d ask first time contributors to take on. Check those out to see
-      if anything resonates.
-    </p>
-
-    <h3>
-      If not, please feel free, empowered, and highly valued to
-      <a href="https://github.com/hoodiehq/editorial/issues/new">make suggestions</a>
-      for contributions you’d like to see on the project. Your brand new and
-      completely unique perspective is incredibly important to shaping this project.
-    </h3>
 
     <h2>Other essential resources</h2>
 
