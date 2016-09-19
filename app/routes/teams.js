@@ -5,8 +5,14 @@ export default Ember.Route.extend({
   model(params) {
     const teamLabel = {
       code: 'Code',
+      design: 'Design',
+      documentation: 'Documentation',
       editorial: 'Editorial'
     }[params.name];
+
+    console.log(`\nteamLabel ==============================`)
+    console.log(teamLabel)
+
 
     return this.get('github').getCampIssues({
       labels: [teamLabel, 'up for grabs']
